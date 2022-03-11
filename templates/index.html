@@ -14,6 +14,7 @@
             <td>ID</td>
             <td>NOMBRE</td>
             <td>PRECIO</td>
+            <td>OPCION</td>
         </tr>
 
         {% for producto in productos %}
@@ -21,8 +22,11 @@
             <td>{{producto['id']}}</td>
             <td>{{producto['nombre']}}</td>
             <td>{{producto['price']}}</td>
+            <td><a href="/editarProducto/{{producto['id']}}">EDITAR</a></td>
+            <td><a href="/eliminar/{{producto['id']}}">ELIMINAR</a></td>
         </tr>
         {% endfor %}
+
     </table>
 
 </body>
